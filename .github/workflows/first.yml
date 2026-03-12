@@ -1,0 +1,19 @@
+
+# WorkFlow Name
+name: My First CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ] # main 브랜치에 push될 때 실행
+  pull_request:
+    branches: [ "main" ] # main 브랜치로 PR 날릴 때 실행
+
+  
+jobs:
+  say-hello-world:
+    # 실행 환경 (Cloud Engineer라면 리눅스 환경에 익숙해져야 함)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello World
+        run: echo "Build and Test completed successfully!"
